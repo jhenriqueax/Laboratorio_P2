@@ -1,0 +1,58 @@
+Main
+association Urna
+---
+---
+---
+
+
+Urna
+composes Eleitor
+composes Candidato
+---
+- qntEleitores: int;
+- qntCandidatos: int;
+- statusVoto: Bool;
+- Eleitor[]: eleitores;
+- Candidato[]: candidatos 
+---
++ Status(): bool;
++ cadastrarEleitor(nome: Srt, cpf: Str): bool
++ cadastrarCandidato(nome: Str): void
++ represenEleitor(): Str
++ represenCandidato(): Str
++ RegistrarVota(): void
++ encerrar(): void 
+---
+
+
+Eleitor
+---
+- nome: Str;
+- cpf: Str;
+- statusVotacao: Bool;
+---
++ Eleitor(nome: Str, cpf: Str) //construtor 
++ getNome(): Str
++ getCpf(): Str
++ getStaus(): bool
++ hashcode(): bool
++ equals(): bool
++ toString(): Str
+---
+
+
+Candidato
+---
+- nome: Str;
+- id: Str;
+- votos: int;
+---
++ getNome(): Str
++ getId(): Str
++ getVotos(): int
++ SetVotos(): int
++ hashcode(): Str
++ equals(): bool
++ toString(): Str
+---
+
